@@ -6,14 +6,17 @@
 </script>
 
 <style>
-  h1{
-    color: #57A71c;
-  }
+
 </style>
 
-<main>
+<svelte:head>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.min.css"
+    rel="stylesheet" />
+</svelte:head>
+
+<main class="container">
   <BigHeader {hashtag} />
   <input type="text" bind:value={hashtag} />
-	<h1>Photos</h1>
   <PhotoList />
 </main>
