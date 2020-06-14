@@ -1,5 +1,6 @@
 <script>
   import BigHeader from "./components/BigHeader.svelte";
+  import PhotoList from "./components/PhotoList.svelte";
   import data from "./instagram.json";
   export let hashtag;
 </script>
@@ -11,7 +12,5 @@
 <main>
   <BigHeader {hashtag} />
   <input type="text" bind:value={hashtag} />
-  <pre>
-    {data.graphql.hashtag.edge_hashtag_to_media.edges[0].node.accessibility_caption}
-  </pre>
+  <PhotoList />
 </main>
